@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block content %}
+<h2>Guestbook Entries</h2>
+
+{% if entries %}
+<ul class="entries-list">
+  {% for entry in entries %}
+  <li><strong>{{ entry.name }}</strong>: {{ entry.message }}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No entries yet. Be the first to leave a message!</p>
+{% endif %} {% endblock %}
